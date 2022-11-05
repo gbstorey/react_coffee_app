@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 467.13 421.98">
+  <defs>
+    <style>
+      .cls-1 {
+        isolation: isolate;
+      }
+
+      .cls-2 {
+        fill: #3c2415;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2, .cls-4 {
+        stroke: #231f20;
+      }
+
+      .cls-3 {
+        fill: #603913;
+        stroke: #3c2415;
+        stroke-width: 4px;
+      }
+
+      .cls-4 {
+        fill: #c49a6c;
+      }
+
+      .cls-5 {
+        fill: #e6e7e8;
+        mix-blend-mode: screen;
+        opacity: .53;
+      }
+    </style>
+  </defs>
+  <g class="cls-1">
+    <g id="Layer_2" data-name="Layer 2">
+      <g id="Layer_1-2" data-name="Layer 1">
+        <ellipse class="cls-3" cx="339.13" cy="202.5" rx="126" ry="39.08"/>
+        <circle class="cls-4" cx="210.99" cy="210.99" r="200.49"/>
+        <path class="cls-2" d="M210.99,.5C94.93,.5,.5,94.93,.5,210.99s94.43,210.49,210.49,210.49,210.49-94.43,210.49-210.49S327.06,.5,210.99,.5Zm0,410.98c-110.73,0-200.49-89.76-200.49-200.49S100.26,10.5,210.99,10.5s200.49,89.76,200.49,200.49-89.76,200.49-200.49,200.49Z"/>
+        <path class="cls-5" d="M210.85,336.39l-99.52-99.52c-78.24-78.24,21.28-177.76,99.52-99.52,78.73-78.73,178.25,20.79,99.52,99.52l-99.52,99.52Z"/>
+      </g>
+    </g>
+  </g>
+</svg>
