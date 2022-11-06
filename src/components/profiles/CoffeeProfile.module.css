@@ -1,0 +1,31 @@
+.cardFlex {
+    display: flex;
+    gap: 50px;
+    align-items: normal;
+    justify-content: space-between;
+}
+
+.leftFlex {
+    justify-content: flex-start;
+}
+
+.image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.center {
+    text-align: center;
+}
+
+.fullRow {
+    flex-basis:100%;
+}
+
+@media (max-width: 800px) {
+    .cardFlex {
+        flex-direction: column;
+    }
+}
