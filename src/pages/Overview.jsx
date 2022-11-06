@@ -1,9 +1,25 @@
 import CoffeeProfile from "../components/profiles/CoffeeProfile.jsx";
-import {useLoaderData, useRouteError} from "react-router-dom";
+import {useLoaderData} from "react-router-dom";
 
 const Overview = () => {
   const loaderData = useLoaderData();
-  const content = loaderData?.map((profile) => (
+
+  let loadedProfiles = [];
+
+  for (const key in loaderData) {
+    loadedProfiles.push({
+      id: key,
+      brand: loaderData[key].brand,
+      name: loaderData[key].name,
+      comments: loaderData[key].comments,
+      brew_methods: loaderData[key].brew_methods,
+      processing: loaderData[key].processing,
+      notes: loaderData[key].notes,
+      imageLink: loaderData[key].imageLink
+    })
+  }
+
+  const content = loadedProfiles.map((profile) => (
     <CoffeeProfile data={profile} key={profile.id} />
   ));
 
