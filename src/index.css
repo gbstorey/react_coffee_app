@@ -3,10 +3,10 @@
 }
 
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Rubik, Inter, Avenir, Helvetica, Arial, sans-serif;
 
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: rgb(0, 0, 0);
+  background-color: #ebe2da;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -26,7 +26,7 @@ ul {
   padding: 0;
 }
 
-h1 {
+h1, p {
   text-align: center;
 }
 

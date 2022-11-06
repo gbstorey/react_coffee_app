@@ -1,31 +1,41 @@
 .cardFlex {
     display: flex;
     gap: 50px;
-    align-items: normal;
+    align-items: center;
     justify-content: space-between;
 }
 
-.leftFlex {
-    justify-content: flex-start;
+.cardFlex ul{
+    margin: 10px 0;
 }
 
+
 .image {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
+    width: 100%;
+    max-height: 350px;
     border-radius: 25px;
+    display: flex;
+    vertical-align: center;
+    position: relative;
 }
 
 .center {
     text-align: center;
+    justify-content: right;
 }
 
 .fullRow {
     flex-basis:100%;
 }
 
-@media (max-width: 800px) {
-    .cardFlex {
-        flex-direction: column;
-    }
+.commentCard {
+    background-color: rgb(31, 57, 51);
+    border-radius: 5px;
+    padding: 15px 25px;
+    margin: 20px auto;
+}
+
+.commentCard p {
+    color: #e0e5e3;
+    font-weight: 400;
 }

@@ -1,28 +1,12 @@
 import CoffeeProfile from "../components/profiles/CoffeeProfile.jsx";
-
-const DUMMY_PROFILES = [
-  {
-    id: "p1",
-    brand: "Starbucks",
-    name: "Guatemala Antigua",
-    comments: "Really loved this one!",
-    brew_methods: ["Drip brewer", "Pour-over", "Press", "Clover", "Cupping"],
-    processing: "washed (wet)",
-    notes: {
-        acidity: 3,
-        body: 3,
-        roast: 2,
-    },
-    imageLink:
-      "https://globalassets.starbucks.com/assets/4206041b8d8e4eceb65482588662c331.jpg?impolicy=1by1_medium_630",
-  },
-];
-
-const content = DUMMY_PROFILES.map((profile) => (
-  <CoffeeProfile data={profile} key={profile.id} />
-));
+import {useLoaderData, useRouteError} from "react-router-dom";
 
 const Overview = () => {
+  const loaderData = useLoaderData();
+  const content = loaderData?.map((profile) => (
+    <CoffeeProfile data={profile} key={profile.id} />
+  ));
+
   return (
     <div>
       <h1>Your Coffee Journal</h1>
@@ -32,3 +16,17 @@ const Overview = () => {
 };
 
 export default Overview;
+
+async function getProfiles() {
+  const res = await fetch("https://react-http-21c77-default-rtdb.firebaseio.com/coffee.json");
+  console.log(res.status)
+  if (!res.ok) {
+    throw new Error ("Failed to fetch coffee profiles.");
+  }
+
+  return res.json();
+}
+
+export function loader() {
+  return getProfiles();
+}

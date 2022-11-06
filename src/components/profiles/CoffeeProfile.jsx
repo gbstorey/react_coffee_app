@@ -20,26 +20,37 @@ const CoffeeProfile = (props) => {
         <div>
           <h1>{name}</h1>
           <h2>{brand}</h2>
-          <h2>{processing}</h2>
-            <div className={classnames(classes.cardFlex, classes.leftFlex)}>
-                <ul>
-                    {brew_methods.map((method) => <li key={brew_methods.indexOf(method)}>{method}</li>)}
-                </ul>
-                <ul>
-                    <li>Acidity: {notes.acidity}</li>
-                    <li>Body: {notes.body}</li>
-                    <li>Roast: {notes.roast}</li>
-                </ul>
-            </div>
+          <div>
+            <ul>
+              {brew_methods.map((method) => (
+                <li key={brew_methods.indexOf(method)}>{method}</li>
+              ))}
+            </ul>
+            <h2>Processing Method</h2>
+            <ul>
+              <li>{processing}</li>
+              <li></li>
+            </ul>
+            <h2>Notes</h2>
+            <ul>
+              <li>
+                Acidity: {notes.acidity} | Body: {notes.body} | Roast:{" "}
+                {notes.roast}
+              </li>
+            </ul>
+          </div>
         </div>
-        <div >
+        <div className={classes.center}>
           <img
-            alt={"picture of coffee"} src={imageLink} className={classes.image}
+            alt={"picture of coffee"}
+            src={imageLink}
+            className={classes.image}
           />
         </div>
-
       </div>
-        <p>{comments}</p>
+        <div className={classes.commentCard}>
+            <p>{comments}</p>
+        </div>
     </Card>
   );
 };
