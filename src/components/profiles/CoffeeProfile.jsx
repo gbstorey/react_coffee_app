@@ -1,17 +1,9 @@
 import classes from "./CoffeeProfile.module.css";
 import Card from "../UI/Card.jsx";
-import classnames from "classnames";
 
 const CoffeeProfile = (props) => {
   const {
-    id,
-    brand,
-    name,
-    comments,
-    brew_methods,
-    processing,
-    notes,
-    imageLink,
+    acidity: acidity, body, brand, brew_methods, comments, imageLink, name, processing, roast
   } = props.data;
 
   return (
@@ -22,9 +14,7 @@ const CoffeeProfile = (props) => {
           <h2>{brand}</h2>
           <div>
             <ul>
-              {brew_methods.map((method) => (
-                <li key={brew_methods.indexOf(method)}>{method}</li>
-              ))}
+              <li>{brew_methods}</li>
             </ul>
             <h2>Processing Method</h2>
             <ul>
@@ -34,8 +24,8 @@ const CoffeeProfile = (props) => {
             <h2>Notes</h2>
             <ul>
               <li>
-                Acidity: {notes.acidity} | Body: {notes.body} | Roast:{" "}
-                {notes.roast}
+                Acidity: {acidity} | Body: {body} | Roast:
+                {roast}
               </li>
             </ul>
           </div>

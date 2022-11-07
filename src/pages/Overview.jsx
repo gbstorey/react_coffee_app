@@ -14,7 +14,9 @@ const Overview = () => {
       comments: loaderData[key].comments,
       brew_methods: loaderData[key].brew_methods,
       processing: loaderData[key].processing,
-      notes: loaderData[key].notes,
+      acidity: loaderData[key].acidity,
+      body: loaderData[key].acidity,
+      roast: loaderData[key].acidity,
       imageLink: loaderData[key].imageLink
     })
   }
@@ -35,7 +37,6 @@ export default Overview;
 
 async function getProfiles() {
   const res = await fetch("https://react-http-21c77-default-rtdb.firebaseio.com/coffee.json");
-  console.log(res.status)
   if (!res.ok) {
     throw new Error ("Failed to fetch coffee profiles.");
   }

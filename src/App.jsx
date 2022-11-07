@@ -3,6 +3,8 @@ import RootLayout from "./pages/RootLayout.jsx";
 import Error from "./pages/Error.jsx";
 import Overview from "./pages/Overview.jsx";
 import {loader as profilesLoader} from "./pages/Overview.jsx";
+import NewProfile from "./pages/NewProfile.jsx";
+import {action as createProfile} from "./pages/NewProfile.jsx";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +19,21 @@ const router = createBrowserRouter([
       },
     ],
   },
+  {
+    path: "/new-entry",
+    element: <RootLayout />,
+    errorElement: <Error />,
+    children: [
+      {
+        index: true,
+        element: < NewProfile />
+      }
+    ]
+  },
+  {
+    path: "/profileCreation",
+    action: createProfile,
+  }
 ]);
 
 function App() {
