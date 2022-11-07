@@ -3,8 +3,8 @@ import RootLayout from "./pages/RootLayout.jsx";
 import Error from "./pages/Error.jsx";
 import Overview from "./pages/Overview.jsx";
 import {loader as profilesLoader} from "./pages/Overview.jsx";
-import NewProfile from "./pages/NewProfile.jsx";
-import {action as createProfile} from "./pages/NewProfile.jsx";
+import NewProfile from "./components/UI/NewProfile.jsx";
+import {action as createProfile} from "./components/UI/NewProfile.jsx";
 
 const router = createBrowserRouter([
   {
