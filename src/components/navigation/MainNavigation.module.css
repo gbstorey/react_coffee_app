@@ -1,5 +1,6 @@
 .header {
     padding: 2rem;
+    background-color: rgb(31, 57, 51);
 }
 
 .header ul {
@@ -10,12 +11,12 @@
 
 .header a {
     color: #e5e5e5;
-    font-size: 1.15rem;
+    font-size: 1.5rem;
     text-decoration: none;
 }
 
 .header a:hover,
 .header a:active,
 .header a.active {
-    color: #fcb66b;
+    color: #e0e5e3;
 }

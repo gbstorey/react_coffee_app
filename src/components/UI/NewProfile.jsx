@@ -2,6 +2,7 @@ import Card from "./Card.jsx";
 import { useFetcher } from "react-router-dom";
 import { useReducer } from "react";
 import NewProfileInput from "../profiles/NewProfileInput.jsx";
+import classes from "./NewProfile.module.css"
 
 const initialFormState = {
   brand: "",
@@ -9,9 +10,9 @@ const initialFormState = {
   comments: "",
   brew_methods: [],
   processing: "",
-  acidity: 0,
-  body: 0,
-  roast: 0,
+  acidity: "",
+  body: "",
+  roast: "",
   imageLink: "",
 };
 
@@ -42,7 +43,7 @@ const NewProfile = () => {
   return (
     <Card>
       <h1>New Entry</h1>
-      <fetcher.Form method={"post"} action={"/profileCreation"}>
+      <fetcher.Form method={"post"} action={"/profileCreation"} className={classes.entryForm}>
         <NewProfileInput label={"Brand"} type={"text"} name={"brand"} value={formState.brand} onChange={handleTextChange}/>
         <NewProfileInput label={"Coffee Name"} type={"text"} name={"name"} value={formState.name} onChange={handleTextChange}/>
         <NewProfileInput label={"Comments"} type={"text"} name={"comments"} value={formState.comments} onChange={handleTextChange}/>
@@ -52,7 +53,7 @@ const NewProfile = () => {
         <NewProfileInput label={"Body"} type={"number"} name={"body"} value={formState.body} onChange={handleTextChange}/>
         <NewProfileInput label={"Roast"} type={"number"} name={"roast"} value={formState.roast} onChange={handleTextChange}/>
         <NewProfileInput label={"Image Link"} type={"text"} name={"imageLink"} value={formState.imageLink} onChange={handleTextChange}/>
-        <button>Submit</button>
+        <button className={classes.button}>Submit</button>
       </fetcher.Form>
     </Card>
   );
