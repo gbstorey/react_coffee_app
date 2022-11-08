@@ -1,20 +1,26 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RootLayout from "./pages/RootLayout.jsx";
-import Error from "./pages/Error.jsx";
-import Overview from "./pages/Overview.jsx";
-import {loader as profilesLoader} from "./pages/Overview.jsx";
-import NewProfile from "./components/UI/NewProfile.jsx";
-import {action as createProfile} from "./components/UI/NewProfile.jsx";
+import {loader as profilesLoader} from "./util/loaders.js";
+import { action as createProfile } from "./util/actions.js";
+import React, { Suspense } from "react";
+
+const NewProfile = React.lazy(() => import("./components/UI/NewProfile.jsx"));
+const Overview = React.lazy(() => import("./pages/Overview.jsx"));
+const Error = React.lazy(() => import("./pages/Error.jsx"));
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
-    errorElement: <Error/>,
+    errorElement: <Suspense fallback={<p>Loading...</p>}><Error /></Suspense>,
     children: [
       {
         index: true,
-        element: <Overview />,
+        element: (
+          <Suspense fallback={<p>Loading...</p>}>
+            <Overview />
+          </Suspense>
+        ),
         loader: profilesLoader,
       },
     ],
@@ -22,18 +28,22 @@ const router = createBrowserRouter([
   {
     path: "/new-entry",
     element: <RootLayout />,
-    errorElement: <Error />,
+    errorElement: <Suspense fallback={<p>Loading...</p>}><Error /></Suspense>,
     children: [
       {
         index: true,
-        element: < NewProfile />
-      }
-    ]
+        element: (
+          <Suspense fallback={<p>Loading...</p>}>
+            <NewProfile />
+          </Suspense>
+        ),
+      },
+    ],
   },
   {
     path: "/profileCreation",
     action: createProfile,
-  }
+  },
 ]);
 
 function App() {
