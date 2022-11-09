@@ -1,0 +1,48 @@
+{
+  "coffee": {
+    "-NGEjkSIuPKdPH4MQ4iB": {
+      "acidity": "3",
+      "body": "3",
+      "brand": "Atlas",
+      "brew_methods": "Pourover",
+      "comments": "Delightful coffee with red apple, cinnamon, and chocolate notes",
+      "imageLink": "https://cdn.shopify.com/s/files/1/0078/2545/7263/products/FincaSanVictor-5lb-3000px_900x.png?v=1595276316",
+      "name": "Guatemala Finca San Victor",
+      "processing": "Washed",
+      "roast": "3"
+    },
+    "-NGJw2YTahggmnoo3Xwy": {
+      "acidity": "4",
+      "body": "4",
+      "brand": "Atlas",
+      "brew_methods": "Cold brew, pour over",
+      "comments": "Notes of stone fruit, gingerbread, and dark brown sugar",
+      "imageLink": "https://cdn.schema.io/spinn-marketplace/5f20d2f9bf06c45cba86881b/32e053be2132d34e7b42c454ff23b9ff/283566SOUTH%20SLOPE%20COFFEE%20-%20Gatakuza%20Lot%2013%20-%20Ngozi%20-%20Burundi%20copy",
+      "name": "Burundi Ngozi",
+      "processing": "Washed",
+      "roast": "4"
+    },
+    "-NGJwX7Kry89yGdDooWL": {
+      "acidity": "3",
+      "body": "3",
+      "brand": "Atlas",
+      "brew_methods": "French Press",
+      "comments": "Notes of plum, toffee, molasses",
+      "imageLink": "https://cdn.shopify.com/s/files/1/0069/6467/4613/products/e1b8b1eb90522ebf69e5b8af63a8bafb_536x.jpg?v=1591199424",
+      "name": "Bolivia La Paz",
+      "processing": "Washed",
+      "roast": "3"
+    },
+    "-NGJwzMCX4yLLA5Sv64J": {
+      "acidity": "2",
+      "body": "2",
+      "brand": "Atlas",
+      "brew_methods": "Pour over",
+      "comments": "Notes of butterscotch, milk chocolate, pumpkin bread",
+      "imageLink": "https://cdn11.bigcommerce.com/s-bp9oll2/images/stencil/1200x1200/products/156/1128/NicarFRproduct__38246.1649778397.jpg?c=2",
+      "name": "Nicaragua San Fernando",
+      "processing": "Wet Washed",
+      "roast": "2"
+    }
+  }
+}

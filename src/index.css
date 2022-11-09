@@ -18,6 +18,8 @@
 body {
   margin: 0;
   text-align: center;
+  background-blend-mode: color-dodge;
+  background-image: url("https://images.pexels.com/photos/702251/pexels-photo-702251.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")
 }
 
 ul {

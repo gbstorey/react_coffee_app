@@ -1,0 +1,8 @@
+.center {
+    text-align: center;
+    background-color: antiquewhite;
+    max-width: 40rem;
+    margin: 2rem auto;
+    border-radius: 25px;
+    padding: 5px 0;
+}

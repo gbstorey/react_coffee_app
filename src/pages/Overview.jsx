@@ -1,5 +1,6 @@
 import CoffeeProfile from "../components/profiles/CoffeeProfile.jsx";
-import {useLoaderData} from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
+import classes from "./Overview.module.css";
 
 const Overview = () => {
   const loaderData = useLoaderData();
@@ -17,8 +18,8 @@ const Overview = () => {
       acidity: loaderData[key].acidity,
       body: loaderData[key].acidity,
       roast: loaderData[key].acidity,
-      imageLink: loaderData[key].imageLink
-    })
+      imageLink: loaderData[key].imageLink,
+    });
   }
 
   const content = loadedProfiles.map((profile) => (
@@ -26,15 +27,13 @@ const Overview = () => {
   ));
 
   return (
-    <div>
-      <h1>Your Coffee Journal</h1>
-      {content}
-    </div>
+    <>
+        <div className={classes.center}>
+        <h1>Your Coffee Journal</h1>
+        </div>
+      <div>{content}</div>
+    </>
   );
 };
 
 export default Overview;
-
-
-
-
